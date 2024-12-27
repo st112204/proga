@@ -454,7 +454,7 @@
                             <div class="code-block">
                                 struct Complex {<br>
                                 &nbsp;&nbsp;double r, i;<br>
-                                &nbsp;&nbsp;Complex(Complex&amp;&amp; C) = default;<br>
+                                &nbsp;&nbsp;Complex(Complex&amp;&amp; C) : r(c.r), i(c.i) { c.r = 0; c.i = 0; }<br>
                                 };
                             </div>
                         </div>
