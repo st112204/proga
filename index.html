@@ -1,0 +1,1433 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=windows-1251" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>160 Questions and Answers</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #1e1e1e; /* Ò¸ìíûé ôîí */
+            color: #d4d4d4; /* Ñâåòëûé òåêñò */
+            margin: 0;
+            padding: 2rem 1rem; /* Îòñòóïû ñâåðõó/ñíèçó è ñëåâà/ñïðàâà */
+        }
+
+        .block {
+            margin-bottom: 2rem; /* Îòñòóï ìåæäó áëîêàìè âîïðîñ-îòâåò */
+        }
+
+        .question {
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+            color: #569cd6; /* Öâåò äëÿ âîïðîñîâ */
+            margin-left: 2rem; /* Îòñòóï äëÿ âîïðîñîâ */
+        }
+
+        .answer {
+            margin-left: 2rem; /* Îáùèé îòñòóï äëÿ òåêñòà îòâåòà */
+        }
+
+            .answer p {
+                margin: 0; /* Óáèðàåì ëèøíèå îòñòóïû ó òåêñòà âíóòðè îòâåòà */
+            }
+
+        .inline-code {
+            font-family: monospace;
+            background-color: #2d2d2d; /* Ò¸ìíûé ôîí äëÿ inline-êîäà */
+            padding: 2px 4px;
+            border-radius: 3px;
+            border: 1px solid #3c3c3c;
+            color: #dcdcaa; /* Öâåò äëÿ inline-êîäà â ñòèëå Visual Studio */
+        }
+
+        .code-block {
+            font-family: monospace;
+            background-color: #2d2d2d; /* Ò¸ìíûé ôîí äëÿ áëîêà êîäà */
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #3c3c3c;
+            margin: 1rem 0; /* Îòñòóïû ñâåðõó è ñíèçó áëîêà êîäà */
+            overflow-x: auto;
+            color: #d4d4d4; /* Öâåò òåêñòà â áëîêå */
+        }
+
+            .code-block .keyword {
+                color: #569cd6; /* Öâåò äëÿ êëþ÷åâûõ ñëîâ */
+            }
+
+            .code-block .type {
+                color: #4ec9b0; /* Öâåò äëÿ òèïîâ äàííûõ */
+            }
+
+            .code-block .variable {
+                color: #9cdcfe; /* Öâåò äëÿ ïåðåìåííûõ */
+            }
+
+        /* Àäàïòàöèÿ äëÿ ìîáèëüíûõ óñòðîéñòâ */
+        @media (max-width: 768px) {
+            body {
+                padding: 1.5rem 1rem; /* Óìåíüøåííûå îòñòóïû äëÿ ïëàíøåòîâ */
+            }
+
+            .block {
+                margin-bottom: 1.5rem; /* Ìåíüøèé îòñòóï ìåæäó áëîêàìè */
+            }
+
+            .question,
+            .answer {
+                margin-left: 1.5rem; /* Óìåíüøåííûé îòñòóï äëÿ âîïðîñîâ è îòâåòîâ */
+            }
+
+            .code-block {
+                padding: 8px; /* Óìåíüøåííûå îòñòóïû âíóòðè áëîêà êîäà */
+                font-size: 14px; /* Óìåíüøåííûé ðàçìåð øðèôòà äëÿ êîäà */
+            }
+        }
+
+        @media (max-width: 480px) {
+            body {
+                padding: 1rem 0.5rem; /* Åù¸ ìåíüøèå îòñòóïû äëÿ óçêèõ ýêðàíîâ */
+            }
+
+            .block {
+                margin-bottom: 1rem; /* Åù¸ ìåíüøèé îòñòóï ìåæäó áëîêàìè */
+            }
+
+            .question,
+            .answer {
+                margin-left: 1rem; /* Åù¸ ìåíüøèé îòñòóï äëÿ âîïðîñîâ è îòâåòîâ */
+            }
+
+            .code-block {
+                font-size: 12px; /* Åù¸ ìåíüøèé ðàçìåð øðèôòà äëÿ êîäà */
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Íà÷àëî áëîêà âîïðîñîâ è îòâåòîâ -->
+
+
+    <div class="block">
+        <div class="question">1. ×òî òàêîå ìàëåíüêèé îáúåêò?</div>
+        <div class="answer">
+            Ìàëåíüêèé îáúåêò õðàíèò âñþ ñâîþ èíôîðìàöèþ â ïàìÿòè, âûäåëåííîé àâòîìàòè÷åñêè.
+            <div class="code-block">
+                struct Frac { int n, d; };<br>
+                Frac x;
+            </div>
+        </div>
+    </div>
+
+    <div class="block">
+        <div class="question">2. ×òî òàêîå áîëüøîé îáúåêò?</div>
+        <div class="answer">
+            Áîëüøîé îáúåêò ñîäåðæèò óêàçàòåëè íà ñâîè ÷àñòè, íàõîäÿùèåñÿ çà ïðåäåëàìè ïàìÿòè îáúåêòà.
+            <div class="code-block">
+                struct Vector { int s, *d; };<br>
+                Vector v;
+            </div>
+        </div>
+    </div>
+
+    <div class="block">
+        <div class="question">3. ×åì áîëüøîé îáúåêò îòëè÷àåòñÿ îò ìàëåíüêîãî?</div>
+        <div class="answer">
+            Áîëüøîé îáúåêò èìååò äèíàìè÷åñêè âûäåëÿåìûå ÷àñòè ïàìÿòè, à ìàëåíüêèé — íåò.
+        </div>
+    </div>
+
+    <div class="block">
+        <div class="question">4. ×òî òàêîå ÷àñòü îáúåêòà?</div>
+        <div class="answer">
+            Ýòî äàííûå, íà êîòîðûå ññûëàåòñÿ îáúåêò è êîòîðûå äîëæíû èñ÷åçíóòü âìåñòå ñ íèì.
+        </div>
+    </div>
+
+    <div class="block">
+        <div class="question">5. ×òî òàêîå õîçÿèí äèíàìè÷åñêîãî îáúåêòà?</div>
+        <div class="answer">
+            Îáúåêò, êîòîðûé óïðàâëÿåò âðåìåíåì æèçíè ñâîèõ ÷àñòåé.
+        </div>
+    </div>
+
+    <div class="block">
+        <div class="question">6. Êàê íàçûâàþòñÿ äèíàìè÷åñêèå îáúåêòû, íå èìåþùèå õîçÿèíà?</div>
+        <div class="answer">
+            Áåñõîçíûå.
+        </div>
+    </div>
+
+    <div class="block">
+        <div class="question">7. Ñêîëüêî õîçÿåâ ìîæåò áûòü ó îäíîãî îáúåêòà?</div>
+        <div class="answer">
+            Òîëüêî îäèí.
+        </div>
+    </div>
+
+    <div class="block">
+        <div class="question">8. Ïðèâåäèòå ïðèìåð ìàëåíüêîãî îáúåêòà.</div>
+        <div class="answer">
+            <div class="code-block">
+                struct Complex { double r, i; };<br>
+                Complex z;
+            </div>
+        </div>
+    </div>
+
+    <div class="block">
+        <div class="question">9. Ïðèâåäèòå ïðèìåð áîëüøîãî îáúåêòà.</div>
+        <div class="answer">
+            <div class="code-block">
+                struct Vector { int s, *d; };<br>
+                Vector v;
+            </div>
+        </div>
+    </div>
+
+    <div class="block">
+        <div class="question">10. Çà÷åì íóæåí äåñòðóêòîð îáúåêòà?</div>
+        <div class="answer">
+            Äëÿ îñâîáîæäåíèÿ ðåñóðñîâ, ñâÿçàííûõ ñ îáúåêòîì.
+        </div>
+    </div>
+
+    <div class="block">
+        <div class="question">11. Äëÿ êàêèõ îáúåêòîâ ãîäèòñÿ äåñòðóêòîð, ïîñòðîåííûé àâòîìàòè÷åñêè?</div>
+        <div class="answer">
+            Äëÿ îáúåêòîâ, íå èñïîëüçóþùèõ äèíàìè÷åñêóþ ïàìÿòü èëè ðåñóðñû.
+        </div>
+    </div>
+
+    <div class="block">
+        <div class="question">12. Êàê ñäåëàòü òàê, ÷òîáû äåñòðóêòîð ïî óìîë÷àíèþ â êëàññå áûë ïîñòðîåí àâòîìàòè÷åñêè?</div>
+        <div class="answer">
+            Èñïîëüçîâàòü <span class="inline-code">~Êëàññ() = default;</span>.
+        </div>
+    </div>
+
+    <div class="block">
+        <div class="question">13. Äëÿ êàêèõ îáúåêòîâ ãîäèòñÿ áûñòðîå êîïèðîâàíèå ïðè ïîìîùè ôóíêöèè memcpy?</div>
+        <div class="answer">
+            Äëÿ îáúåêòîâ áåç äèíàìè÷åñêîé ïàìÿòè è óêàçàòåëåé.
+            <div class="code-block">
+                struct Frac { int n, d; };<br>
+                Frac a1[100], a2[100];<br>
+                memcpy(a1, a2, sizeof(a1));
+            </div>
+        </div>
+    </div>
+
+    <div class="block">
+        <div class="question">14. Êàê óñòðîåí äåñòðóêòîð ñâÿçíîãî ñïèñêà, åñëè äåñòðóêòîð óçëà óäàëÿåò òîëüêî åãî?</div>
+        <div class="answer">
+            Óäàëÿåò âñå óçëû ðåêóðñèâíî.
+            <div class="code-block">
+                void del(Node*& h) {<br>
+                &nbsp;&nbsp;if (!h) return;<br>
+                &nbsp;&nbsp;del(h->n);<br>
+                &nbsp;&nbsp;delete h;<br>
+                &nbsp;&nbsp;h = nullptr;<br>
+                }<br>
+                struct List { Node* h; ~List() { del(h); } };
+            </div>
+        </div>
+    </div>
+
+    <div class="block">
+        <div class="question">15. Êàê óñòðîåí äåñòðóêòîð ñâÿçíîãî ñïèñêà, åñëè äåñòðóêòîð óçëà óäàëÿåò âåñü õâîñò?</div>
+        <div class="answer">
+            Êàæäûé óçåë óäàëÿåò ñëåäóþùèé óçåë â äåñòðóêòîðå.
+            <div class="code-block">
+                struct Node {<br>
+                &nbsp;&nbsp;int d;<br>
+                &nbsp;&nbsp;Node* n;<br>
+                &nbsp;&nbsp;~Node() { delete n; }<br>
+                };<br>
+                struct List { Node* h; ~List() { delete h; } };
+            </div>
+        </div>
+    </div>
+
+    <div class="block">
+        <div class="question">16. Êàê íàçûâàåòñÿ êîíñòðóêòîð ñ îäíèì ïàðàìåòðîì?</div>
+        <div class="answer">
+            Êîíñòðóêòîð ïðåîáðàçîâàíèÿ.
+        </div>
+    </div>
+
+    <div class="block">
+        <div class="question">17. Äëÿ ÷åãî íóæåí êîíñòðóêòîð ñ îäíèì ïàðàìåòðîì?</div>
+        <div class="answer">
+            Äëÿ àâòîìàòè÷åñêîãî ïðåîáðàçîâàíèÿ òèïà â îáúåêò êëàññà.
+        </div>
+    </div>
+
+    <div class="block">
+        <div class="question">18. Êàê óñòðîåí êîíñòðóêòîð äðîáè?</div>
+        <div class="answer">
+            <div class="code-block">
+                struct Frac {<br>
+                &nbsp;&nbsp;int n, d;<br>
+                &nbsp;&nbsp;Frac(int nn = 0, int dd = 1) : n(nn), d(dd) {}<br>
+                };
+            </div>
+        </div>
+    </div>
+
+    <div class="block">
+        <div class="question">19. Êàê óñòðîåí êîíñòðóêòîð îáû÷íîãî êîìïëåêñíîãî ÷èñëà?</div>
+        <div class="answer">
+            <div class="code-block">
+                struct Complex {<br>
+                &nbsp;&nbsp;double r, i;<br>
+                &nbsp;&nbsp;Complex(double rr = 0, double ii = 0) : r(rr), i(ii) {}<br>
+                };
+            </div>
+        </div>
+    </div>
+
+    <div class="block">
+        <div class="question">20. Êàê óñòðîåí êîíñòðóêòîð äóðàöêîãî êîìïëåêñíîãî ÷èñëà?</div>
+        <div class="answer">
+            <div class="code-block">
+                struct Comp {<br>
+                &nbsp;&nbsp;double r, *i;<br>
+                &nbsp;&nbsp;Comp(double rr = 0, double ii = 0) : r(rr), i(new double(ii)) {}<br>
+                };
+            </div>
+        </div>
+    </div>
+
+    <div class="block">
+        <div class="question">21. Êàê ðåàëèçóåòñÿ êîíñòðóêòîð êîïèðîâàíèÿ âåêòîðà?</div>
+        <div class="answer">
+            <div class="code-block">
+                struct Vector {<br>
+                &nbsp;&nbsp;int s;<br>
+                &nbsp;&nbsp;double* d;<br>
+                &nbsp;&nbsp;Vector(const Vector& V) : s(V.s), d(new double[s]) {<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;for (int i = 0; i < s; ++i) d[i] = V.d[i];<br>
+                &nbsp;&nbsp;}<br>
+                };
+            </div>
+        </div>
+    </div>
+
+    <div class="block">
+        <div class="question">22. Êàê ðåàëèçóåòñÿ êîíñòðóêòîð êîïèðîâàíèÿ ñâÿçíîãî ñïèñêà?</div>
+        <div class="answer">
+            <div class="code-block">
+                Node* copy(Node* hh) {<br>
+                &nbsp;&nbsp;if (!hh) return nullptr;<br>
+                &nbsp;&nbsp;return new Node(hh->d, copy(hh->n));<br>
+                }<br>
+                struct List {<br>
+                &nbsp;&nbsp;Node* h;<br>
+                &nbsp;&nbsp;List(const List& L) : h(copy(L.h)) {}<br>
+                };
+            </div>
+        </div>
+    </div>
+
+    <div class="block">
+        <div class="question">23. ×òî òàêîå L-value?</div>
+        <div class="answer">
+            L-value — ýòî âûðàæåíèå, êîòîðîå ìîæåò ñòîÿòü ñëåâà îò îïåðàòîðà ïðèñâàèâàíèÿ.
+        </div>
+    </div>
+
+    <div class="block">
+        <div class="question">24. ×òî òàêîå R-value?</div>
+        <div class="answer">
+            R-value — ýòî âðåìåííîå çíà÷åíèå, êîòîðîå íå èìååò èìåíè è íå ìîæåò áûòü èçìåíåíî íàïðÿìóþ.
+        </div>
+    </div>
+
+    <div class="block">
+        <div class="question">25. ×òî òàêîå êîíñòðóêòîð ïåðåìåùåíèÿ?</div>
+        <div class="answer">
+            Êîíñòðóêòîð, êîòîðûé ïåðåìåùàåò ðåñóðñû èç âðåìåííîãî îáúåêòà â íîâûé.
+        </div>
+    </div>
+
+    <div class="block">
+        <div class="question">26. Êîãäà èñïîëüçóåòñÿ êîíñòðóêòîð ïåðåìåùåíèÿ?</div>
+        <div class="answer">
+            Êîãäà îáúåêò èíèöèàëèçèðóåòñÿ âðåìåííûì îáúåêòîì (íàïðèìåð, <span class="inline-code">std::move</span>).
+        </div>
+    </div>
+
+    <div class="block">
+        <div class="question">27. Êàê âûãëÿäèò êîíñòðóêòîð ïåðåìåùåíèÿ îáû÷íîãî êîìïëåêñíîãî ÷èñëà?</div>
+        <div class="answer">
+            <div class="code-block">
+                struct Complex {<br>
+                &nbsp;&nbsp;double r, i;<br>
+                &nbsp;&nbsp;Complex(Complex&& C) = default;<br>
+                };
+            </div>
+        </div>
+    </div>
+
+    <div class="block">
+        <div class="question">28. Êàê âûãëÿäèò êîíñòðóêòîð ïåðåìåùåíèÿ äóðàöêîãî êîìïëåêñíîãî ÷èñëà?</div>
+        <div class="answer">
+            <div class="code-block">
+                struct Comp {<br>
+                &nbsp;&nbsp;double r, *i;<br>
+                &nbsp;&nbsp;Comp(Comp&& C) : r(C.r), i(C.i) { C.i = nullptr; }<br>
+                };
+            </div>
+        </div>
+    </div>
+
+    <div class="block">
+        <div class="question">29. Êàê âûãëÿäèò êîíñòðóêòîð ïåðåìåùåíèÿ âåêòîðà?</div>
+        <div class="answer">
+            <div class="code-block">
+                struct Vector {<br>
+                &nbsp;&nbsp;int s;<br>
+                &nbsp;&nbsp;double* d;<br>
+                &nbsp;&nbsp;Vector(Vector&& V) : s(V.s), d(V.d) { V.d = nullptr; }<br>
+                };
+            </div>
+        </div>
+    </div>
+
+    <div class="block">
+        <div class="question">30. Êàê âûãëÿäèò êîíñòðóêòîð ïåðåìåùåíèÿ ñâÿçíîãî ñïèñêà?</div>
+        <div class="answer">
+            <div class="code-block">
+                struct List {<br>
+                &nbsp;&nbsp;Node* h;<br>
+                &nbsp;&nbsp;List(List&& L) : h(L.h) { L.h = nullptr; }<br>
+                };
+            </div>
+        </div>
+    </div>
+
+    <div class="block">
+        <div class="question">31. Äëÿ ÷åãî íóæåí êîíñòðóêòîð ïåðåìåùåíèÿ?</div>
+        <div class="answer">
+            Äëÿ îïòèìèçàöèè îïåðàöèé ñ âðåìåííûìè îáúåêòàìè è ïðåäîòâðàùåíèÿ ëèøíåãî êîïèðîâàíèÿ.
+        </div>
+    </div>
+
+    <div class="block">
+        <div class="question">32. Êàê óêàçàòü êîìïèëÿòîðó íà òî, ÷òî ñîäåðæèìîå ëîêàëüíîé ïåðåìåííîé íàì áîëüøå íå íóæíî?</div>
+        <div class="answer">
+            Èñïîëüçîâàòü <span class="inline-code">std::move</span>.
+        </div>
+    </div>
+
+    <div class="block">
+        <div class="question">33. Êàê çàñòàâèòü êîìïèëÿòîð èñïîëüçîâàòü êîíñòðóêòîð ïåðåìåùåíèÿ âìåñòî êîíñòðóêòîðà êîïèðîâàíèÿ?</div>
+        <div class="answer">
+            Ïåðåäàòü âðåìåííûé îáúåêò èëè èñïîëüçîâàòü <span class="inline-code">std::move</span>.
+        </div>
+    </div>
+
+    <div class="block">
+        <div class="question">34. ×åì êîíñòðóêòîð êîïèðîâàíèÿ îòëè÷àåòñÿ îò îïåðàöèè ïðèñâàèâàíèÿ?</div>
+        <div class="answer">
+            Êîíñòðóêòîð êîïèðîâàíèÿ ñîçäàåò íîâûé îáúåêò, â òî âðåìÿ êàê îïåðàöèÿ ïðèñâàèâàíèÿ èçìåíÿåò óæå ñóùåñòâóþùèé îáúåêò.
+        </div>
+    </div>
+
+    <div class="block">
+        <div class="question">35. Êàê çàñòàâèòü êîìïèëÿòîð ñòðîèòü îïåðàöèþ ïðèñâàèâàíèÿ àâòîìàòè÷åñêè?</div>
+        <div class="answer">
+            Èñïîëüçîâàòü <span class="inline-code">Êëàññ & operator=(const Êëàññ&) = default;</span>.
+        </div>
+    </div>
+
+    <div class="block">
+        <div class="question">36. Êîãäà íóæíî ðåàëèçîâûâàòü êîíñòðóêòîð êîïèðîâàíèÿ, îïåðàöèþ ïðèñâàèâàíèÿ è äåñòðóêòîð âðó÷íóþ?</div>
+        <div class="answer">
+            Êîãäà êëàññ óïðàâëÿåò äèíàìè÷åñêèìè ðåñóðñàìè, íàïðèìåð, âûäåëÿåò ïàìÿòü èëè îòêðûâàåò ôàéëû.
+        </div>
+    </div>
+
+    <div class="block">
+        <div class="question">37. Êàê âûãëÿäèò êîïèðóþùàÿ îïåðàöèÿ ïðèñâàèâàíèÿ äëÿ äóðàöêèõ êîìïëåêñíûõ ÷èñåë?</div>
+        <div class="answer">
+            <div class="code-block">
+                Comp& Comp::operator=(const Comp& c) {<br>
+                &nbsp;&nbsp;r = c.r;<br>
+                &nbsp;&nbsp;*i = *c.i;<br>
+                &nbsp;&nbsp;return *this;<br>
+                }
+            </div>
+        </div>
+    </div>
+
+    <div class="block">
+        <div class="question">38. Êàê âûãëÿäèò êîïèðóþùàÿ îïåðàöèÿ ïðèñâàèâàíèÿ äëÿ âåêòîðîâ?</div>
+        <div class="answer">
+            <div class="code-block">
+                Vector& Vector::operator=(const Vector& V) {<br>
+                &nbsp;&nbsp;if (this == &V) return *this;<br>
+                &nbsp;&nbsp;delete[] d;<br>
+                &nbsp;&nbsp;s = V.s;<br>
+                &nbsp;&nbsp;d = new double[s];<br>
+                &nbsp;&nbsp;for (int i = 0; i < s; ++i) d[i] = V.d[i];<br>
+                &nbsp;&nbsp;return *this;<br>
+                }
+            </div>
+        </div>
+    </div>
+
+    <div class="block">
+        <div class="question">39. Êàê âûãëÿäèò êîïèðóþùàÿ îïåðàöèÿ ïðèñâàèâàíèÿ äëÿ ñâÿçíûõ ñïèñêîâ?</div>
+        <div class="answer">
+            <div class="code-block">
+                List& List::operator=(const List& L) {<br>
+                &nbsp;&nbsp;if (this == &L) return *this;<br>
+                &nbsp;&nbsp;Node* temp = copy(L.h);<br>
+                &nbsp;&nbsp;del(h);<br>
+                &nbsp;&nbsp;h = temp;<br>
+                &nbsp;&nbsp;return *this;<br>
+                }
+            </div>
+        </div>
+    </div>
+
+    <div class="block">
+        <div class="question">40. Êàê âûãëÿäèò ïåðåìåùàþùàÿ îïåðàöèÿ ïðèñâàèâàíèÿ äëÿ äóðàöêèõ êîìïëåêñíûõ ÷èñåë?</div>
+        <div class="answer">
+            <div class="code-block">
+                Comp& Comp::operator=(Comp&& c) {<br>
+                &nbsp;&nbsp;r = c.r;<br>
+                &nbsp;&nbsp;delete i;<br>
+                &nbsp;&nbsp;i = c.i;<br>
+                &nbsp;&nbsp;c.i = nullptr;<br>
+                &nbsp;&nbsp;return *this;<br>
+                }
+            </div>
+        </div>
+    </div>
+
+    <div class="block">
+        <div class="question">41. Êàê âûãëÿäèò ïåðåìåùàþùàÿ îïåðàöèÿ ïðèñâàèâàíèÿ äëÿ âåêòîðîâ?</div>
+        <div class="answer">
+            <div class="code-block">
+                Vector& Vector::operator=(Vector&& V) {<br>
+                &nbsp;&nbsp;s = V.s;<br>
+                &nbsp;&nbsp;std::swap(d, V.d);<br>
+                &nbsp;&nbsp;V.d = nullptr;<br>
+                &nbsp;&nbsp;return *this;<br>
+                }
+            </div>
+        </div>
+    </div>
+
+    <div class="block">
+        <div class="question">42. Êàê âûãëÿäèò ïåðåìåùàþùàÿ îïåðàöèÿ ïðèñâàèâàíèÿ äëÿ ñâÿçíûõ ñïèñêîâ?</div>
+        <div class="answer">
+            <div class="code-block">
+                List& List::operator=(List&& L) {<br>
+                &nbsp;&nbsp;std::swap(h, L.h);<br>
+                &nbsp;&nbsp;return *this;<br>
+                }
+            </div>
+        </div>
+    </div>
+
+    <div class="block">
+        <div class="question">43. ×òî òàêîå óìíûé óêàçàòåëü?</div>
+        <div class="answer">
+            Ýòî óêàçàòåëü, êîòîðûé óïðàâëÿåò âðåìåíåì æèçíè îáúåêòà, íà êîòîðûé îí óêàçûâàåò, àâòîìàòè÷åñêè îñâîáîæäàÿ ïàìÿòü.
+        </div>
+    </div>
+
+    <div class="block">
+        <div class="question">44. Çà÷åì íóæåí óìíûé óêàçàòåëü?</div>
+        <div class="answer">
+            Äëÿ àâòîìàòè÷åñêîãî óïðàâëåíèÿ ïàìÿòüþ è ïðåäîòâðàùåíèÿ óòå÷åê ïàìÿòè.
+        </div>
+    </div>
+
+    <div class="block">
+        <div class="question">45. Êàê âûãëÿäèò ãëóïûé óìíûé óêàçàòåëü?</div>
+        <div class="answer">
+            <div class="code-block">
+                struct TimePtr {<br>
+                &nbsp;&nbsp;Time* p;<br>
+                &nbsp;&nbsp;TimePtr(Time* pp = nullptr) : p(pp) {}<br>
+                &nbsp;&nbsp;~TimePtr() { delete p; }<br>
+                };
+            </div>
+        </div>
+    </div>
+
+    <div class="block">
+        <div class="question">46. ×åì ãëóïûé óìíûé óêàçàòåëü ëó÷øå îáû÷íîãî?</div>
+        <div class="answer">
+            Îí àâòîìàòè÷åñêè óïðàâëÿåò âðåìåíåì æèçíè îáúåêòà, íî íå ïðîâåðÿåò åãî ñîñòîÿíèå.
+        </div>
+    </div>
+
+    <div class="block">
+        <div class="question">47. Êàê âûãëÿäèò óìíûé óìíûé óêàçàòåëü?</div>
+        <div class="answer">
+            <div class="code-block">
+                struct TimePtr {<br>
+                &nbsp;&nbsp;Time* p;<br>
+                &nbsp;&nbsp;TimePtr(Time* pp = nullptr) : p(pp) {}<br>
+                &nbsp;&nbsp;~TimePtr() { if (p) delete p; }<br>
+                };
+            </div>
+        </div>
+    </div>
+
+    <div class="block">
+        <div class="question">48. ×åì óìíûé óìíûé óêàçàòåëü ëó÷øå ãëóïîãî óìíîãî óêàçàòåëÿ?</div>
+        <div class="answer">
+            Îí ïðîâåðÿåò ñîñòîÿíèå óêàçàòåëÿ ïåðåä óäàëåíèåì, èçáåãàÿ âîçìîæíûõ îøèáîê.
+        </div>
+    </div>
+
+    <div class="block">
+        <div class="question">49. ×åì ïåðåãðóçêà ïðåôèêñíîãî èíêðåìåíòà îòëè÷àåòñÿ îò ïåðåãðóçêè ïîñòôèêñíîãî (2 ïóíêòà)?</div>
+        <div class="answer">
+            Ïðåôèêñíûé èíêðåìåíò èñïîëüçóåòñÿ êàê <span class="inline-code">++a</span>, ïîñòôèêñíûé — êàê <span class="inline-code">a++</span>.<br>
+            Ïðåôèêñíûé èíêðåìåíò óâåëè÷èâàåò çíà÷åíèå ïåðåìåííîé è âîçâðàùàåò å¸.<br>
+            Ïîñòôèêñíûé èíêðåìåíò âîçâðàùàåò ñòàðîå çíà÷åíèå è çàòåì óâåëè÷èâàåò ïåðåìåííóþ.
+        </div>
+    </div>
+
+    <div class="block">
+        <div class="question">50. Êàê êîìïèëÿòîð ïîíèìàåò âûðàæåíèå p->v?</div>
+        <div class="answer">
+            Êîìïèëÿòîð èñïîëüçóåò îïåðàòîð <span class="inline-code">-></span>, êîòîðûé îáðàùàåòñÿ ê ïîëþ èëè ìåòîäó îáúåêòà, íà êîòîðûé óêàçûâàåò óêàçàòåëü.
+        </div>
+    </div>
+
+    <div class="block">
+        <div class="question">51. Êàê âûãëÿäèò ïåðåãðóçêà îïåðàöèè ïðåîáðàçîâàíèÿ òèïà?</div>
+        <div class="answer">
+            <div class="code-block">
+                struct Frac {<br>
+                &nbsp;&nbsp;int n, d;<br>
+                &nbsp;&nbsp;operator double() const { return double(n) / d; }<br>
+                };
+            </div>
+        </div>
+    </div>
+
+    <div class="block">
+        <div class="question">52. Êàê âûãëÿäèò ïåðåãðóçêà îïåðàöèè ->?</div>
+        <div class="answer">
+            <div class="code-block">
+                struct TimePtr {<br>
+                &nbsp;&nbsp;Time* p;<br>
+                &nbsp;&nbsp;Time* operator->() { return p; }<br>
+                };
+            </div>
+        </div>
+    </div>
+
+    <div class="block">
+        <div class="question">53. Êàêóþ çàäà÷ó ðåøàþò èñêëþ÷åíèÿ?</div>
+        <div class="answer">
+            Èñêëþ÷åíèÿ ïîçâîëÿþò îáðàáàòûâàòü îøèáêè, âîçíèêàþùèå âî âðåìÿ âûïîëíåíèÿ ïðîãðàììû, è ïåðåäàâàòü èíôîðìàöèþ î íèõ â âûøåñòîÿùèå ôóíêöèè.
+        </div>
+    </div>
+
+    <div class="block">
+        <div class="question">54. Ñàìûé ïðîñòîé ñïîñîá ðåøåíèÿ çàäà÷è îá èíôîðìèðîâàíèè âûøåñòîÿùèõ ôóíêöèé îá îøèáêàõ, âîçíèêàþùèõ â âûðàæåíèÿõ.</div>
+        <div class="answer">
+            Èñïîëüçîâàíèå âîçâðàùàåìîãî êîäà îøèáêè èëè èñêëþ÷åíèé.
+        </div>
+    </div>
+
+    <div class="block">
+        <div class="question">55. ×òî òàêîå NaN?</div>
+        <div class="answer">
+            NaN (Not-a-Number) — ýòî ñïåöèàëüíîå çíà÷åíèå, îáîçíà÷àþùåå ðåçóëüòàò íåêîððåêòíîé àðèôìåòè÷åñêîé îïåðàöèè.
+        </div>
+    </div>
+
+    <div class="block">
+        <div class="question">56. Êàêîâû ïðàâèëà âû÷èñëåíèé ñ NaN?</div>
+        <div class="answer">
+            Ëþáàÿ îïåðàöèÿ ñ NaN âîçâðàùàåò NaN. Íàïðèìåð, <span class="inline-code">NaN + 1</span> èëè <span class="inline-code">sqrt(NaN)</span> òàêæå äàþò NaN.
+        </div>
+    </div>
+
+    <div class="block">
+        <div class="question">57. Êàê ìîæíî èñïîëüçîâàòü ãëîáàëüíûå ïåðåìåííûå äëÿ ðåøåíèÿ çàäà÷è îá èíôîðìèðîâàíèè âûøåñòîÿùèõ ôóíêöèé îá îøèáêàõ?</div>
+        <div class="answer">
+            Ìîæíî õðàíèòü êîä îøèáêè â ãëîáàëüíîé ïåðåìåííîé è ïðîâåðÿòü å¸ â ðàçíûõ ÷àñòÿõ ïðîãðàììû.
+        </div>
+    </div>
+
+    <div class="block">
+        <div class="question">58. Êàê ìîæíî èñïîëüçîâàòü ðåçóëüòàòû ôóíêöèé äëÿ ðåøåíèÿ çàäà÷è îá èíôîðìèðîâàíèè âûøåñòîÿùèõ ôóíêöèé îá îøèáêàõ?</div>
+        <div class="answer">
+            Âîçâðàùàòü êîä îøèáêè èëè èñïîëüçîâàòü èñêëþ÷åíèÿ äëÿ èíôîðìèðîâàíèÿ î âîçíèêøèõ îøèáêàõ.
+        </div>
+    </div>
+
+    <div class="block">
+        <div class="question">59. Êàê ìîæíî èñïîëüçîâàòü îáúåêòû èñêëþ÷åíèé îäèíàêîâîãî òèïà äëÿ ðåøåíèÿ çàäà÷è îá èíôîðìèðîâàíèè âûøåñòîÿùèõ ôóíêöèé îá îøèáêàõ?</div>
+        <div class="answer">
+            Èñïîëüçîâàòü îäèí òèï èñêëþ÷åíèÿ äëÿ âñåõ îøèáîê â ïðîãðàììå è ïåðåäàâàòü åãî â âûøåñòîÿùèå ôóíêöèè.
+        </div>
+    </div>
+
+    <div class="block">
+        <div class="question">60. Êàê ìîæíî èñïîëüçîâàòü îáúåêòû èñêëþ÷åíèé ðàçíûõ òèïîâ (áåç ïîëåé) äëÿ ðåøåíèÿ çàäà÷è îá èíôîðìèðîâàíèè âûøåñòîÿùèõ ôóíêöèé îá îøèáêàõ?</div>
+        <div class="answer">
+            Êàæäûé òèï èñêëþ÷åíèÿ áóäåò óêàçûâàòü íà îïðåäåë¸ííóþ îøèáêó, è îáðàáîòêà áóäåò â çàâèñèìîñòè îò òèïà èñêëþ÷åíèÿ.
+        </div>
+    </div>
+
+    <div class="block">
+        <div class="question">61. Êàê ìîæíî èñïîëüçîâàòü îáúåêòû èñêëþ÷åíèé ðàçíûõ òèïîâ (ñ ïîëÿìè) äëÿ ðåøåíèÿ çàäà÷è îá èíôîðìèðîâàíèè âûøåñòîÿùèõ ôóíêöèé îá îøèáêàõ?</div>
+        <div class="answer">
+            Îáúåêòû èñêëþ÷åíèé ìîãóò ñîäåðæàòü èíôîðìàöèþ î ïàðàìåòðå îøèáêè, íàïðèìåð, ÷èñëîâûå çíà÷åíèÿ èëè ñîîáùåíèÿ.
+        </div>
+    </div>
+
+    <div class="block">
+        <div class="question">62. ×òî òàêîå enum class è ÷åì îí îòëè÷àåòñÿ îò ïðîñòî enum?</div>
+        <div class="answer">
+            <span class="inline-code">enum class</span> ÿâëÿåòñÿ òèïîáåçîïàñíûì, òî åñòü çíà÷åíèÿ íåëüçÿ íåÿâíî ïðåîáðàçîâûâàòü â öåëûå ÷èñëà, â îòëè÷èå îò îáû÷íîãî <span class="inline-code">enum</span>.
+        </div>
+    </div>
+
+    <div class="block">
+        <div class="question">63. Êàê èñïîëüçóþòñÿ êîíñòàíòû òèïà enum class?</div>
+        <div class="answer">
+            Êîíñòàíòû òèïà <span class="inline-code">enum class</span> èñïîëüçóþòñÿ ñ ÿâíûì óêàçàíèåì òèïà, íàïðèìåð, <span class="inline-code">ErrorCode::E_OK</span>.
+        </div>
+    </div>
+
+    <div class="block">
+        <div class="question">64. ×òî òàêîå ïðèíöèï èíêàïñóëÿöèè?</div>
+        <div class="answer">
+            Ïðèíöèï èíêàïñóëÿöèè çàêëþ÷àåòñÿ â ñîêðûòèè âíóòðåííåé ðåàëèçàöèè îáúåêòà è ïðåäîñòàâëåíèè äîñòóïà ê íåìó òîëüêî ÷åðåç ïóáëè÷íûå ìåòîäû.
+        </div>
+    </div>
+
+    <div class="block">
+        <div class="question">65. Äëÿ ÷åãî íóæíî ñëåäîâàòü ïðèíöèïó èíêàïñóëÿöèè ïðè ïðîåêòèðîâàíèè è ðåàëèçàöèè êëàññîâ?</div>
+        <div class="answer">
+            ×òîáû îáåñïå÷èòü çàùèòó äàííûõ è ñêðûòü äåòàëè ðåàëèçàöèè, äåëàÿ èíòåðôåéñ îáúåêòà áîëåå ÷èñòûì è óäîáíûì.
+        </div>
+    </div>
+
+    <div class="block">
+        <div class="question">66. ×òî òàêîå èíâàðèàíò êëàññà?</div>
+        <div class="answer">
+            Ýòî óñëîâèå, êîòîðîå äîëæíî áûòü èñòèííûì äëÿ ëþáîãî îáúåêòà êëàññà â ëþáîé ìîìåíò âðåìåíè.
+        </div>
+    </div>
+
+    <div class="block">
+        <div class="question">67. Ïî÷åìó âàæíî ïîçâîëèòü èíâàðèàíòó êëàññà íàðóøàòüñÿ âî âðåìÿ ðàáîòû ìåòîäîâ?</div>
+        <div class="answer">
+            Èíâàðèàíò ìîæåò íàðóøàòüñÿ â ïðîöåññå ðàáîòû ìåòîäîâ, íî âàæíûì ÿâëÿåòñÿ âîññòàíîâëåíèå åãî ïîñëå âûïîëíåíèÿ ìåòîäà.
+        </div>
+    </div>
+
+    <div class="block">
+        <div class="question">68. Êàê ñêðûòü íåêîòîðûå ïîëÿ è ìåòîäû?</div>
+        <div class="answer">
+            Èñïîëüçîâàòü ìîäèôèêàòîðû äîñòóïà <span class="inline-code">private:</span> èëè <span class="inline-code">protected:</span>.
+        </div>
+    </div>
+
+    <div class="block">
+        <div class="question">69. Êàê ñäåëàòü íåêîòîðûå ïîëÿ è ìåòîäû îòêðûòûìè?</div>
+        <div class="answer">
+            Èñïîëüçîâàòü ìîäèôèêàòîð <span class="inline-code">public:</span>.
+        </div>
+    </div>
+
+    <div class="block">
+        <div class="question">70. ×åì struct îòëè÷àåòñÿ îò class?</div>
+        <div class="answer">
+            Â <span class="inline-code">struct</span> ÷ëåíû ïî óìîë÷àíèþ èìåþò äîñòóï <span class="inline-code">public:</span>, à â <span class="inline-code">class</span> — <span class="inline-code">private:</span>.
+        </div>
+    </div>
+
+    <div class="block">
+        <div class="question">71. ×òî òàêîå äðóæåñòâåííûå ôóíêöèè?</div>
+        <div class="answer">
+            Äðóæåñòâåííûå ôóíêöèè èìåþò äîñòóï ê çàêðûòûì è çàùèù¸ííûì ÷ëåíàì êëàññà, íî íå ÿâëÿþòñÿ åãî ìåòîäàìè.
+        </div>
+    </div>
+
+    <div class="block">
+        <div class="question">72. ×òî òàêîå äðóæåñòâåííûå êëàññû?</div>
+        <div class="answer">
+            Äðóæåñòâåííûå êëàññû èìåþò äîñòóï ê çàêðûòûì è çàùèù¸ííûì ÷ëåíàì äðóãîãî êëàññà, êàê åñëè áû îíè áûëè åãî ìåòîäàìè.
+        </div>
+    </div>
+
+    <div class="block">
+        <div class="question">73. Êàê ñäåëàòü ôóíêöèþ äðóãîì?</div>
+        <div class="answer">
+            Èñïîëüçîâàòü êëþ÷åâîå ñëîâî <span class="inline-code">friend</span> ïåðåä îïðåäåëåíèåì ôóíêöèè â êëàññå.
+        </div>
+    </div>
+
+    <div class="block">
+        <div class="question">74. Êàê ñäåëàòü êëàññ äðóãîì?</div>
+        <div class="answer">
+            Èñïîëüçîâàòü êëþ÷åâîå ñëîâî <span class="inline-code">friend class</span> ïåðåä îïðåäåëåíèåì êëàññà.
+        </div>
+    </div>
+
+    <div class="block">
+        <div class="question">75. Äëÿ ÷åãî íóæíû äðóæåñòâåííûå ôóíêöèè?</div>
+        <div class="answer">
+            Äëÿ äîñòóïà ê âíóòðåííèì äàííûì è ìåòîäàì êëàññà, åñëè ýòî íåîáõîäèìî âíåøíåìó êîäó.
+        </div>
+    </div>
+
+    <div class="block">
+        <div class="question">76. Äëÿ ÷åãî íóæíû äðóæåñòâåííûå êëàññû?</div>
+        <div class="answer">
+            Äëÿ îðãàíèçàöèè òåñíîé ðàáîòû ìåæäó êëàññàìè, ãäå îäèí êëàññ äîëæåí èìåòü äîñòóï ê çàêðûòûì äàííûì äðóãîãî.
+        </div>
+    </div>
+
+    <div class="block">
+        <div class="question">77. Áûâàåò ëè íåÿâíàÿ äðóæáà (åñëè A äðóã B, òî àâòîìàòè÷åñêè B äðóã A)?</div>
+        <div class="answer">
+            Íåò, äðóæáà â C++ âñåãäà ÿâíàÿ.
+        </div>
+    </div>
+
+    <div class="block">
+        <div class="question">78. ×òî òàêîå êîíñòàíòíûé îáúåêò?</div>
+        <div class="answer">
+            Êîíñòàíòíûé îáúåêò — ýòî îáúåêò, ïîëÿ êîòîðîãî íåëüçÿ èçìåíÿòü ïîñëå èíèöèàëèçàöèè.
+        </div>
+    </div>
+
+    <div class="block">
+        <div class="question">79. Êàêèå ìåòîäû ìîæíî âûçûâàòü ó êîíñòàíòíîãî îáúåêòà?</div>
+        <div class="answer">
+            Ìîæíî âûçûâàòü òîëüêî êîíñòàíòíûå ìåòîäû, êîòîðûå íå èçìåíÿþò ñîñòîÿíèå îáúåêòà.
+        </div>
+    </div>
+
+    <div class="block">
+        <div class="question">80. ×òî òàêîå êîíñòàíòíûé ìåòîä?</div>
+        <div class="answer">
+            Êîíñòàíòíûé ìåòîä — ýòî ìåòîä, êîòîðûé íå èçìåíÿåò ñîñòîÿíèå îáúåêòà è ïîìå÷åí êëþ÷åâûì ñëîâîì <span class="inline-code">const</span>.
+        </div>
+    </div>
+
+    <div class="block">
+        <div class="question">81. Çà÷åì íóæíî îïðåäåëÿòü íåêîòîðûå îáúåêòû êàê êîíñòàíòíûå?</div>
+        <div class="answer">
+            ×òîáû ãàðàíòèðîâàòü, ÷òî èõ ñîñòîÿíèå íå áóäåò èçìåíåíî, è çàùèòèòü èõ îò íåæåëàòåëüíûõ èçìåíåíèé.
+        </div>
+    </div>
+
+    <div class="block">
+        <div class="question">82. Êàê ïåðåãðóæàòü ìåòîäû äëÿ îáû÷íûõ è êîíñòàíòíûõ îáúåêòîâ?</div>
+        <div class="answer">
+            Ìîæíî ñîçäàòü äâà ìåòîäà ñ îäèíàêîâûì èìåíåì, íî îäèí èç íèõ áóäåò ïîìå÷åí êàê <span class="inline-code">const</span>, à âòîðîé — íåò.
+        </div>
+    </div>
+
+    <div class="block">
+        <div class="question">83. Êàêóþ çàäà÷ó ðåøàåò óêàçàòåëü?</div>
+        <div class="answer">
+            Óêàçàòåëü ïîçâîëÿåò õðàíèòü àäðåñ îáúåêòà â ïàìÿòè è ðàáîòàòü ñ íèì.
+        </div>
+    </div>
+
+    <div class="block">
+        <div class="question">84. ×òî òàêîå èòåðàòîð?</div>
+        <div class="answer">
+            Èòåðàòîð — ýòî îáúåêò, êîòîðûé ïîçâîëÿåò ïîñëåäîâàòåëüíî îáõîäèòü ýëåìåíòû êîíòåéíåðà.
+        </div>
+    </div>
+
+    <div class="block">
+        <div class="question">85. ×òî òàêîå ôèêòèâíûé ýëåìåíò êîíòåéíåðà?</div>
+        <div class="answer">
+            Ôèêòèâíûé ýëåìåíò — ýòî ñïåöèàëüíûé ýëåìåíò, êîòîðûé èñïîëüçóåòñÿ äëÿ çàâåðøåíèÿ êîíòåéíåðà, íàïðèìåð, <span class="inline-code">nullptr</span> â ñïèñêàõ.
+        </div>
+    </div>
+
+    <div class="block">
+        <div class="question">86. Ãäå â êîíòåéíåðå ðàñïîëîæåí ôèêòèâíûé ýëåìåíò?</div>
+        <div class="answer">
+            Îáû÷íî ôèêòèâíûé ýëåìåíò ðàñïîëàãàåòñÿ ïîñëå ïîñëåäíåãî äåéñòâèòåëüíîãî ýëåìåíòà êîíòåéíåðà, íàïðèìåð, â êîíöå ñïèñêà.
+        </div>
+    </div>
+
+    <div class="block">
+        <div class="question">87. Çà÷åì íóæåí ôèêòèâíûé ýëåìåíò êîíòåéíåðà?</div>
+        <div class="answer">
+            Îí èñïîëüçóåòñÿ äëÿ óïðîùåíèÿ ðàáîòû ñ êîíòåéíåðîì, ÷òîáû èçáåæàòü ïðîâåðîê íà ïóñòîòó èëè çàâåðøåíèå êîíòåéíåðà.
+        </div>
+    </div>
+
+    <div class="block">
+        <div class="question">88. Êàê îáúÿâèòü ïîëå êëàññà, êîòîðîå ìîæíî ìåíÿòü äàæå ó êîíñòàíòíûõ îáúåêòîâ?</div>
+        <div class="answer">
+            Èñïîëüçîâàòü êëþ÷åâîå ñëîâî <span class="inline-code">mutable</span>.
+        </div>
+    </div>
+
+    <div class="block">
+        <div class="question">89. Êàê èçáàâèòüñÿ îò ïðèçíàêà const?</div>
+        <div class="answer">
+            Èñïîëüçîâàòü <span class="inline-code">const_cast</span> äëÿ óäàëåíèÿ <span class="inline-code">const</span>.
+        </div>
+    </div>
+
+    <div class="block">
+        <div class="question">90. Çà÷åì ìîãóò ïîíàäîáèòüñÿ ïîëÿ, êîòîðûå ìîæíî ìåíÿòü äàæå ó êîíñòàíòíûõ îáúåêòîâ?</div>
+        <div class="answer">
+            Äëÿ ðåàëèçàöèè êýøèðîâàíèÿ èëè äðóãèõ ñîñòîÿíèé, êîòîðûå íå äîëæíû èçìåíÿòü âíåøíèé âèä îáúåêòà.
+        </div>
+    </div>
+
+    <div class="block">
+        <div class="question">91. ×òî òàêîå îáúåäèíåíèÿ?</div>
+        <div class="answer">
+            Îáúåäèíåíèå — ýòî òèï äàííûõ, â êîòîðîì âñå ïîëÿ èñïîëüçóþò îäíó è òó æå îáëàñòü ïàìÿòè.
+        </div>
+    </div>
+
+    <div class="block">
+        <div class="question">92. Êàêèå áûâàþò îáúåäèíåíèÿ?</div>
+        <div class="answer">
+            Èìåíîâàííûå è áåçûìÿííûå.
+        </div>
+    </div>
+
+    <div class="block">
+        <div class="question">93. ×òî îïðåäåëÿþò èìåíîâàííûå îáúåäèíåíèÿ?</div>
+        <div class="answer">
+            Èìåíîâàííûå îáúåäèíåíèÿ îïðåäåëÿþò íàáîð äàííûõ ñ èìåíåì, ãäå âñå ïîëÿ èñïîëüçóþò îäíó è òó æå ïàìÿòü.
+        </div>
+    </div>
+
+    <div class="block">
+        <div class="question">94. ×òî îïðåäåëÿþò áåçûìÿííûå îáúåäèíåíèÿ?</div>
+        <div class="answer">
+            Áåçûìÿííûå îáúåäèíåíèÿ èñïîëüçóþòñÿ áåç èìåíè è ìîãóò áûòü èñïîëüçîâàíû â äðóãèõ ñòðóêòóðàõ èëè ôóíêöèÿõ.
+        </div>
+    </div>
+
+    <div class="block">
+        <div class="question">95. Ãäå ìîæíî èñïîëüçîâàòü áåçûìÿííûå îáúåäèíåíèÿ?</div>
+        <div class="answer">
+            Îíè ìîãóò èñïîëüçîâàòüñÿ â ñòðóêòóðàõ èëè ëîêàëüíûõ ïåðåìåííûõ äëÿ ýêîíîìèè ïàìÿòè.
+        </div>
+    </div>
+
+    <div class="block">
+        <div class="question">96. Äëÿ ÷åãî íóæíû îáúåäèíåíèÿ (3 ïóíêòà)?</div>
+        <div class="answer">
+            Ýêîíîìèÿ ïàìÿòè.<br>
+            Ïðåîáðàçîâàíèå òèïîâ äàííûõ, ñîõðàíÿÿ áèòîâîå ïðåäñòàâëåíèå.<br>
+            Ïîëèìîðôèçì.
+        </div>
+    </div>
+
+    <div class="block">
+        <div class="question">97. ×òî òàêîå ïîëèìîðôèçì?</div>
+        <div class="answer">
+            Ïîëèìîðôèçì — ýòî ñïîñîáíîñòü îáúåêòà ðàáîòàòü ñ ðàçíûìè òèïàìè äàííûõ èëè ìåòîäîâ, áëàãîäàðÿ åäèíîìó èíòåðôåéñó.
+        </div>
+    </div>
+
+    <div class="block">
+        <div class="question">98. Êàê âûãëÿäèò ïîëèìîðôíàÿ ñòðóêòóðà Number, êîòîðàÿ ìîæåò õðàíèòü êàê öåëûå, òàê è âåùåñòâåííûå ÷èñëà?</div>
+        <div class="answer">
+            <div class="code-block">
+                struct Number {<br>
+                &nbsp;&nbsp;virtual ~Number() = default;<br>
+                &nbsp;&nbsp;virtual void print() const = 0;<br>
+                };<br>
+                struct Integer : Number {<br>
+                &nbsp;&nbsp;int value;<br>
+                &nbsp;&nbsp;void print() const override { std::cout << value; }<br>
+                };<br>
+                struct Double : Number {<br>
+                &nbsp;&nbsp;double value;<br>
+                &nbsp;&nbsp;void print() const override { std::cout << value; }<br>
+                };
+            </div>
+        </div>
+    </div>
+
+    <div class="block">
+        <div class="question">99. Êàê âûãëÿäèò îïåðàöèÿ ñëîæåíèÿ äëÿ ïîëèìîðôíîé ñòðóêòóðû Number, êîòîðàÿ ìîæåò õðàíèòü êàê öåëûå, òàê è âåùåñòâåííûå ÷èñëà?</div>
+        <div class="answer">
+            Ñîçäà¸òñÿ îòäåëüíàÿ ôóíêöèÿ, êîòîðàÿ îáðàáàòûâàåò ñëîæåíèå, ïðîâåðÿÿ òèïû:
+            <div class="code-block">
+                Number* add(const Number& a, const Number& b);
+            </div>
+        </div>
+    </div>
+
+    <div class="block">
+        <div class="question">100. Êàêóþ çàäà÷ó ðåøàþò øàáëîíû ôóíêöèé?</div>
+        <div class="answer">
+            Îíè ïîçâîëÿþò ñîçäàâàòü óíèâåðñàëüíûé êîä, ðàáîòàþùèé ñ ðàçíûìè òèïàìè äàííûõ.
+        </div>
+    </div>
+
+    <div class="block">
+        <div class="question">101. Êàê îïðåäåëèòü øàáëîí ôóíêöèè?</div>
+        <div class="answer">
+            Èñïîëüçîâàòü êëþ÷åâîå ñëîâî <span class="inline-code">template</span>:
+            <div class="code-block">
+                template &lt;typename T&gt;<br>
+                T max(T a, T b) { return a > b ? a : b; }
+            </div>
+        </div>
+    </div>
+
+    <div class="block">
+        <div class="question">102. ×åì ìîãóò áûòü øàáëîííûå ïàðàìåòðû?</div>
+        <div class="answer">
+            Òèïàìè äàííûõ (<span class="inline-code">typename</span>), çíà÷åíèÿìè (íàïðèìåð, <span class="inline-code">int</span>), óêàçàòåëÿìè è ññûëêàìè.
+        </div>
+    </div>
+
+    <div class="block">
+        <div class="question">103. Êàêèå âûðàæåíèÿ ìîãóò èñïîëüçîâàòüñÿ â êà÷åñòâå øàáëîííîãî ïàðàìåòðà òèïà int?</div>
+        <div class="answer">
+            Öåëûå ÷èñëà, êîíñòàíòû, ïåðå÷èñëåíèÿ, óêàçàòåëè èëè ññûëêè.
+        </div>
+    </div>
+
+    <div class="block">
+        <div class="question">104. ×åì ìîãóò áûòü øàáëîííûå ïàðàìåòðû "òèïà" class?</div>
+        <div class="answer">
+            Ìîãóò áûòü êàê áàçîâûìè, òàê è ïîëüçîâàòåëüñêèìè òèïàìè.
+        </div>
+    </div>
+
+    <div class="block">
+        <div class="question">105. Êàê ìîæíî óêàçàòü ÿâíî çíà÷åíèÿ øàáëîííûõ ïàðàìåòðîâ äëÿ øàáëîííîé ôóíêöèè?</div>
+        <div class="answer">
+            Ïåðåäàòü èõ â óãëîâûõ ñêîáêàõ ïðè âûçîâå:
+            <div class="code-block">
+                max&lt;int&gt;(1, 2);
+            </div>
+        </div>
+    </div>
+
+    <div class="block">
+        <div class="question">106. Â êàêèõ ñëó÷àÿõ ìîæíî âîñïîëüçîâàòüñÿ àâòîìàòè÷åñêèì îïðåäåëåíèåì øàáëîííûõ ïàðàìåòðîâ äëÿ øàáëîííîé ôóíêöèè?</div>
+        <div class="answer">
+            Êîãäà òèïû àðãóìåíòîâ ìîæíî âûâåñòè èç ïåðåäàííûõ ïàðàìåòðîâ ôóíêöèè.
+        </div>
+    </div>
+
+    <div class="block">
+        <div class="question">107. Êàê ìîæíî ÿâíî çàñòàâèòü êîìïèëÿòîð ïîñòðîèòü ýêçåìïëÿð øàáëîííîé ôóíêöèè äëÿ îïðåäåë¸ííûõ çíà÷åíèé øàáëîííûõ ïàðàìåòðîâ?</div>
+        <div class="answer">
+            Âûçâàòü øàáëîííóþ ôóíêöèþ ñ êîíêðåòíûìè òèïàìè èëè èñïîëüçîâàòü <span class="inline-code">template instantiation</span>.
+        </div>
+    </div>
+
+    <div class="block">
+        <div class="question">108. Òèïû ñ ïàðàìåòðàìè â C.</div>
+        <div class="answer">
+            Ñèìóëÿöèÿ ÷åðåç èñïîëüçîâàíèå ñòðóêòóð è óêàçàòåëåé íà ôóíêöèè.
+        </div>
+    </div>
+
+    <div class="block">
+        <div class="question">109. Êàê âûãëÿäèò òèï ñ ïàðàìåòðàìè â C íà ïðèìåðå ñâÿçíîãî ñïèñêà?</div>
+        <div class="answer">
+            <div class="code-block">
+                typedef struct Node {<br>
+                &nbsp;&nbsp;void* data;<br>
+                &nbsp;&nbsp;struct Node* next;<br>
+                } Node;
+            </div>
+        </div>
+    </div>
+
+    <div class="block">
+        <div class="question">110. Êàê âûãëÿäèò òèï ñ ïàðàìåòðàìè â C++ (øàáëîííûé) íà ïðèìåðå ñâÿçíîãî ñïèñêà?</div>
+        <div class="answer">
+            <div class="code-block">
+                template &lt;typename T&gt;<br>
+                struct Node {<br>
+                &nbsp;&nbsp;T data;<br>
+                &nbsp;&nbsp;Node* next;<br>
+                };
+            </div>
+        </div>
+    </div>
+
+    <div class="block">
+        <div class="question">111. ×òî òàêîå îáîáù¸ííîå ïðîãðàììèðîâàíèå?</div>
+        <div class="answer">
+            Ñòèëü ïðîãðàììèðîâàíèÿ, ïîçâîëÿþùèé ïèñàòü óíèâåðñàëüíûé êîä äëÿ ðàáîòû ñ ðàçíûìè òèïàìè äàííûõ.
+        </div>
+    </div>
+
+    <div class="block">
+        <div class="question">112. Êîãäà è çà÷åì èñïîëüçóåòñÿ êëþ÷åâîå ñëîâî typename?</div>
+        <div class="answer">
+            Êîãäà òðåáóåòñÿ ÿâíî óêàçàòü, ÷òî èäåíòèôèêàòîð ÿâëÿåòñÿ òèïîì â øàáëîíå.
+        </div>
+    </div>
+
+    <div class="block">
+        <div class="question">113. Êàê âûãëÿäèò ôóíêöèÿ âûâîäà íà ýêðàí ñîäåðæèìîãî âåêòîðà èç öåëûõ ÷èñåë?</div>
+        <div class="answer">
+            <div class="code-block">
+                void print(const std::vector&lt;int&gt;&amp; v) {<br>
+                &nbsp;&nbsp;for (int x : v) std::cout &lt;&lt; x &lt;&lt; ' ';<br>
+                }
+            </div>
+        </div>
+    </div>
+
+    <div class="block">
+        <div class="question">114. Êàê âûãëÿäèò ôóíêöèÿ âûâîäà íà ýêðàí ñîäåðæèìîãî âåêòîðà èç ýëåìåíòîâ ëþáîãî òèïà?</div>
+        <div class="answer">
+            <div class="code-block">
+                template &lt;typename T&gt;<br>
+                void print(const std::vector&lt;T&gt;&amp; v) {<br>
+                &nbsp;&nbsp;for (const T&amp; x : v) std::cout &lt;&lt; x &lt;&lt; ' ';<br>
+                }
+            </div>
+        </div>
+    </div>
+
+    <div class="block">
+        <div class="question">115. Êàê âûãëÿäèò ôóíêöèÿ âûâîäà íà ýêðàí ñîäåðæèìîãî ëþáîãî êîíòåéíåðà èç ýëåìåíòîâ ëþáîãî òèïà?</div>
+        <div class="answer">
+            <div class="code-block">
+                template &lt;typename C&gt;<br>
+                void print(const C&amp; c) {<br>
+                &nbsp;&nbsp;for (const auto&amp; x : c) std::cout &lt;&lt; x &lt;&lt; ' ';<br>
+                }
+            </div>
+        </div>
+    </div>
+
+    <div class="block">
+        <div class="question">116. Çà÷åì íóæíà ïåðåãðóçêà îïåðàöèé â îáîáù¸ííîì ïðîãðàììèðîâàíèè?</div>
+        <div class="answer">
+            Äëÿ ñîçäàíèÿ óäîáíûõ è èíòóèòèâíî ïîíÿòíûõ èíòåðôåéñîâ ðàáîòû ñ îáúåêòàìè.
+        </div>
+    </div>
+
+    <div class="block">
+        <div class="question">117. Çà÷åì íóæíû âëîæåííûå òèïû â îáîáù¸ííîì ïðîãðàììèðîâàíèè?</div>
+        <div class="answer">
+            Äëÿ îïðåäåëåíèÿ çàâèñèìîñòåé âíóòðè êëàññîâ, íàïðèìåð, èòåðàòîðîâ.
+        </div>
+    </div>
+
+    <div class="block">
+        <div class="question">118. ×òî òàêîå ïðîãðàììèðîâàíèå íà ýòàïå êîìïèëÿöèè?</div>
+        <div class="answer">
+            Ýòî âûïîëíåíèå âû÷èñëåíèé è ïðîâåðîê íà ýòàïå êîìïèëÿöèè, ÷òîáû óñêîðèòü âûïîëíåíèå ïðîãðàììû.
+        </div>
+    </div>
+
+    <div class="block">
+        <div class="question">119. Çà÷åì íóæíî ïðîãðàììèðîâàíèå íà ýòàïå êîìïèëÿöèè?</div>
+        <div class="answer">
+            Äëÿ îïòèìèçàöèè, ïðîâåðêè îøèáîê è óìåíüøåíèÿ âðåìåíè âûïîëíåíèÿ ïðîãðàììû.
+        </div>
+    </div>
+
+    <div class="block">
+        <div class="question">120. Êàê âûãëÿäåëî ïðîãðàììèðîâàíèå íà ýòàïå êîìïèëÿöèè äî èçîáðåòåíèÿ constexpr (íà ïðèìåðå ÷èñåë Ôèáîíà÷÷è)?</div>
+        <div class="answer">
+            <div class="code-block">
+                template &lt;int N&gt; struct Fibonacci {<br>
+                &nbsp;&nbsp;static const int value = Fibonacci&lt;N - 1&gt;::value + Fibonacci&lt;N - 2&gt;::value;<br>
+                };<br>
+                template &lt;&gt; struct Fibonacci&lt;0&gt; { static const int value = 0; };<br>
+                template &lt;&gt; struct Fibonacci&lt;1&gt; { static const int value = 1; };
+            </div>
+        </div>
+    </div>
+
+    <div class="block">
+        <div class="question">121. Êàê âûãëÿäèò ïðîãðàììèðîâàíèå íà ýòàïå êîìïèëÿöèè ïîñëå èçîáðåòåíèÿ constexpr (íà ïðèìåðå ÷èñåë Ôèáîíà÷÷è)?</div>
+        <div class="answer">
+            <div class="code-block">
+                constexpr int fibonacci(int n) {<br>
+                &nbsp;&nbsp;return (n &lt;= 1) ? n : fibonacci(n - 1) + fibonacci(n - 2);<br>
+                }
+            </div>
+        </div>
+    </div>
+
+    <div class="block">
+        <div class="question">122. ×òî òàêîå ìåòîäû ñ äîïîëíèòåëüíûìè øàáëîííûìè ïàðàìåòðàìè?</div>
+        <div class="answer">
+            Ìåòîäû, êîòîðûå ïðèíèìàþò äîïîëíèòåëüíûå ïàðàìåòðû øàáëîíà, îòëè÷íûå îò ïàðàìåòðîâ êëàññà.
+        </div>
+    </div>
+
+    <div class="block">
+        <div class="question">123. Êàê çàïîëíèòü âåêòîð íà÷àëüíûìè ýëåìåíòàìè, âçÿòûìè èç ìàññèâà?</div>
+        <div class="answer">
+            <div class="code-block">
+                template &lt;typename T&gt;<br>
+                void fill(std::vector&lt;T&gt;&amp; v, const T* arr, size_t n) {<br>
+                &nbsp;&nbsp;v.assign(arr, arr + n);<br>
+                }
+            </div>
+        </div>
+    </div>
+
+    <div class="block">
+        <div class="question">124. ×òî íóæíî ñäåëàòü, ÷òîáû äðóæåñòâåííàÿ ê øàáëîííîìó êëàññó ôóíêöèÿ òîæå áûëà øàáëîííîé?</div>
+        <div class="answer">
+            Îáúÿâèòü å¸ êàê øàáëîííóþ âíóòðè êëàññà:
+            <div class="code-block">
+                template &lt;typename T&gt; friend void print(const T&amp;);
+            </div>
+        </div>
+    </div>
+
+    <div class="block">
+        <div class="question">125. Êàê ñäåëàòü òàê, ÷òîáû îáúåêòû êëàññà âåêòîð ìîæíî áûëî ñêëàäûâàòü, åñëè ó òèïà ýëåìåíòîâ åñòü ñëîæåíèå?</div>
+        <div class="answer">
+            Èñïîëüçîâàòü SFINAE èëè êîíöåïòû äëÿ ïðîâåðêè íàëè÷èÿ îïåðàöèè ñëîæåíèÿ.
+        </div>
+    </div>
+
+    <div class="block">
+        <div class="question">126. Êàê ìîæíî ÿâíî çàñòàâèòü êîìïèëÿòîð ïîñòðîèòü ýêçåìïëÿð øàáëîííîãî êëàññà äëÿ îïðåäåë¸ííûõ çíà÷åíèé øàáëîííûõ ïàðàìåòðîâ?</div>
+        <div class="answer">
+            ßâíî óêàçàòü òèïû øàáëîíîâ ïðè ñîçäàíèè îáúåêòà:
+            <div class="code-block">
+                MyClass&lt;int&gt; obj;
+            </div>
+        </div>
+    </div>
+
+    <div class="block">
+        <div class="question">127. Êàê îïèñàòü ÷àñòíûé ñëó÷àé äëÿ øàáëîííîãî êëàññà?</div>
+        <div class="answer">
+            Ñîçäàòü ñïåöèàëèçàöèþ øàáëîíà:
+            <div class="code-block">
+                template &lt;&gt; struct MyClass&lt;int&gt; { /* ðåàëèçàöèÿ */ };
+            </div>
+        </div>
+    </div>
+
+    <div class="block">
+        <div class="question">128. Êàêîé ÷àñòíûé ñëó÷àé áåð¸òñÿ, åñëè ïîäõîäÿò íåñêîëüêî?</div>
+        <div class="answer">
+            Ñàìûé êîíêðåòíûé ÷àñòíûé ñëó÷àé.
+        </div>
+    </div>
+
+    <div class="block">
+        <div class="question">129. Äëÿ ÷åãî ñëóæèò øàáëîí is_same?</div>
+        <div class="answer">
+            Äëÿ ïðîâåðêè ðàâåíñòâà òèïîâ íà ýòàïå êîìïèëÿöèè.
+        </div>
+    </div>
+
+    <div class="block">
+        <div class="question">130. Â êàêîì çàãîëîâî÷íîì ôàéëå îïèñàí øàáëîí is_same?</div>
+        <div class="answer">
+            Â <span class="inline-code">&lt;type_traits&gt;</span>.
+        </div>
+    </div>
+
+    <div class="block">
+        <div class="question">131. Êàê ðåàëèçîâàòü øàáëîí is_same?</div>
+        <div class="answer">
+            <div class="code-block">
+                template &lt;typename T, typename U&gt; struct is_same {<br>
+                &nbsp;&nbsp;static constexpr bool value = false;<br>
+                };<br>
+                template &lt;typename T&gt; struct is_same&lt;T, T&gt; {<br>
+                &nbsp;&nbsp;static constexpr bool value = true;<br>
+                };
+            </div>
+        </div>
+    </div>
+
+    <div class="block">
+        <div class="question">132. Êàê èñïîëüçîâàòü ðåçóëüòàò ïðîâåðêè is_same íà ýòàïå êîìïèëÿöèè?</div>
+        <div class="answer">
+            Ñ ïîìîùüþ <span class="inline-code">static_assert</span> èëè SFINAE:
+            <div class="code-block">
+                static_assert(is_same&lt;int, int&gt;::value, "Types must match");
+            </div>
+        </div>
+    </div>
+
+    <div class="block">
+        <div class="question">133. Êàê âûãëÿäèò ïðîâåðêà íà ðàâåíñòâî òèïîâ ïðè ïîìîùè is_same äëÿ òèïîâ R è T?</div>
+        <div class="answer">
+            <span class="inline-code">is_same&lt;R, T&gt;::value</span>.
+        </div>
+    </div>
+
+    <div class="block">
+        <div class="question">134. ×òî òàêîå SFINAE?</div>
+        <div class="answer">
+            "Substitution Failure Is Not An Error" — ìåõàíèçì, ïðè êîòîðîì îøèáêè ïîäñòàíîâêè øàáëîíîâ íå ïðèâîäÿò ê îøèáêå êîìïèëÿöèè.
+        </div>
+    </div>
+
+    <div class="block">
+        <div class="question">135. Êàê ïðîâåðèòü íàëè÷èå â êëàññå ïîëÿ ñ èìåíåì Foo ëþáîãî òèïà?</div>
+        <div class="answer">
+            Ñ ïîìîùüþ SFINAE:
+            <div class="code-block">
+                template &lt;typename T&gt;<br>
+                auto hasFoo(T*) -> decltype(std::declval&lt;T&gt;().Foo, std::true_type{});
+            </div>
+        </div>
+    </div>
+
+    <div class="block">
+        <div class="question">136. Êàê ïðîâåðèòü íàëè÷èå â êëàññå ïîëÿ ñ èìåíåì Foo îïðåäåë¸ííîãî òèïà?</div>
+        <div class="answer">
+            Äîáàâèòü ïðîâåðêó òèïà ïîëÿ ÷åðåç <span class="inline-code">decltype</span>.
+        </div>
+    </div>
+
+    <div class="block">
+        <div class="question">137. Êàê ïðîâåðèòü íàëè÷èå â êëàññå äâóõ ïîëåé ñ èìåíàìè Foo è Bar îäèíàêîâîãî òèïà (îòñóòñòâèå îáîèõ ãîäèòñÿ)?</div>
+        <div class="answer">
+            Ñðàâíèòü èõ òèïû ÷åðåç SFINAE èëè êîíöåïòû.
+        </div>
+    </div>
+
+    <div class="block">
+        <div class="question">138. Êàê ïðîâåðèòü íàëè÷èå â êëàññå äâóõ ïîëåé ñ èìåíàìè Foo è Bar îäèíàêîâîãî òèïà (îòñóòñòâèå îáîèõ íå ãîäèòñÿ)?</div>
+        <div class="answer">
+            Ïðîâåðèòü ÷åðåç SFINAE è èñïîëüçîâàòü <span class="inline-code">std::is_same</span>.
+        </div>
+    </div>
+
+    <div class="block">
+        <div class="question">139. Êàê ïðîâåðèòü íàëè÷èå â êëàññå ìåòîäà ñ èìåíåì Foo è îïðåäåë¸ííîé ñèãíàòóðîé?</div>
+        <div class="answer">
+            Ñ ïîìîùüþ SFINAE è <span class="inline-code">decltype</span> äëÿ ìåòîäà.
+        </div>
+    </div>
+
+    <div class="block">
+        <div class="question">140. Çà÷åì íóæíû ïîíÿòèÿ (concept)?</div>
+        <div class="answer">
+            Äëÿ ïðîâåðêè óñëîâèé íà òèïû â øàáëîíàõ íà ýòàïå êîìïèëÿöèè.
+        </div>
+    </div>
+
+    <div class="block">
+        <div class="question">141. Êàê â ïðîãðàììå îïèñàòü ïîíÿòèå?</div>
+        <div class="answer">
+            Èñïîëüçîâàòü êëþ÷åâîå ñëîâî <span class="inline-code">concept</span>.
+        </div>
+    </div>
+
+    <div class="block">
+        <div class="question">142. Êàê èñïîëüçîâàòü ïîíÿòèå ñ îäíèì ïàðàìåòðîì?</div>
+        <div class="answer">
+            Â îáúÿâëåíèè øàáëîíà:
+            <div class="code-block">
+                template &lt;Integral T&gt;<br>
+                void func(T val);
+            </div>
+        </div>
+    </div>
+
+    <div class="block">
+        <div class="question">143. Êàê èñïîëüçîâàòü ïîíÿòèå ñ íåñêîëüêèìè ïàðàìåòðàìè â îáúÿâëåíèè ôóíêöèè?</div>
+        <div class="answer">
+            <div class="code-block">
+                template &lt;Addable T, Multiplicable U&gt;<br>
+                auto operation(T a, U b);
+            </div>
+        </div>
+    </div>
+
+    <div class="block">
+        <div class="question">144. Êàê èñïîëüçîâàòü ïîíÿòèå ñ íåñêîëüêèìè ïàðàìåòðàìè â îáúÿâëåíèè êëàññà?</div>
+        <div class="answer">
+            <div class="code-block">
+                template &lt;Comparable T, Hashable U&gt;<br>
+                class MyClass;
+            </div>
+        </div>
+    </div>
+
+    <div class="block">
+        <div class="question">145. Êàêîé çàãîëîâî÷íûé ôàéë íóæíî ïîäêëþ÷èòü, ÷òîáû ïîëüçîâàòüñÿ ïîíÿòèÿìè èç ñòàíäàðòíîé áèáëèîòåêè?</div>
+        <div class="answer">
+            <span class="inline-code">&lt;concepts&gt;</span>.
+        </div>
+    </div>
+
+    <div class="block">
+        <div class="question">146. ×òî òàêîå îñüìèíîãè?</div>
+        <div class="answer">
+            Â ïðîãðàììèðîâàíèè îñüìèíîãè — ýòî êîíöåïöèÿ, ãäå îáúåêò èìååò ìíîæåñòâî êîíå÷íîñòåé (óêàçàòåëåé), ïîçâîëÿþùèõ åìó âçàèìîäåéñòâîâàòü ñ ðàçíûìè ÷àñòÿìè ñèñòåìû îäíîâðåìåííî.
+        </div>
+    </div>
+
+    <div class="block">
+        <div class="question">147. ×òî òàêîå êîíòåéíåð?</div>
+        <div class="answer">
+            Êîíòåéíåð — ñòðóêòóðà äàííûõ, ïîçâîëÿþùàÿ õðàíèòü è óïðàâëÿòü êîëëåêöèåé îáúåêòîâ.
+        </div>
+    </div>
+
+    <div class="block">
+        <div class="question">148. ×òî òàêîå ëèíåéíûé êîíòåéíåð?</div>
+        <div class="answer">
+            Êîíòåéíåð, â êîòîðîì ýëåìåíòû õðàíÿòñÿ â ëèíåéíîé ïîñëåäîâàòåëüíîñòè.
+        </div>
+    </div>
+
+    <div class="block">
+        <div class="question">149. Êàêèå èìåþòñÿ ëèíåéíûå êîíòåéíåðû â ñòàíäàðòíîé áèáëèîòåêå?</div>
+        <div class="answer">
+            <span class="inline-code">std::vector</span>, <span class="inline-code">std::deque</span>, <span class="inline-code">std::list</span>, <span class="inline-code">std::array</span>.
+        </div>
+    </div>
+
+    <div class="block">
+        <div class="question">150. ×òî òàêîå àññîöèàòèâíûé êîíòåéíåð?</div>
+        <div class="answer">
+            Êîíòåéíåð, êîòîðûé óïîðÿäî÷èâàåò ýëåìåíòû íà îñíîâå êëþ÷åé.
+        </div>
+    </div>
+
+    <div class="block">
+        <div class="question">151. Êàêèå èìåþòñÿ àññîöèàòèâíûå êîíòåéíåðû?</div>
+        <div class="answer">
+            <span class="inline-code">std::set</span>, <span class="inline-code">std::map</span>, <span class="inline-code">std::multiset</span>, <span class="inline-code">std::multimap</span>.
+        </div>
+    </div>
+
+    <div class="block">
+        <div class="question">152. ×òî òàêîå èòåðàòîð?</div>
+        <div class="answer">
+            Îáúåêò, êîòîðûé ïðåäîñòàâëÿåò äîñòóï ê ýëåìåíòàì êîíòåéíåðà.
+        </div>
+    </div>
+
+    <!-- Êîíåö áëîêà âîïðîñîâ è îòâåòîâ -->
+</body>
+</html>
