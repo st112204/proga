@@ -587,11 +587,11 @@
                         <div class="question">48. Как выглядит перемещающая операция присваивания для дурацких комплексных чисел?</div>
                         <div class="answer">
                             <div class="code-block">
-                                Comp&amp; Comp::operator=(Comp&amp;&amp; c) {<br>
-                                &nbsp;&nbsp;r = c.r;<br>
+                                Comp&amp; Comp::operator=(Comp&amp;&amp; C) {<br>
+                                &nbsp;&nbsp;r = C.r;<br>
                                 &nbsp;&nbsp;delete i;<br>
-                                &nbsp;&nbsp;i = c.i;<br>
-                                &nbsp;&nbsp;c.i = nullptr;<br>
+                                &nbsp;&nbsp;i = C.i;<br>
+                                &nbsp;&nbsp;C.i = nullptr;<br>
                                 &nbsp;&nbsp;return *this;<br>
                                 }
                             </div>
