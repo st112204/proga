@@ -371,7 +371,7 @@
                             <div class="code-block">
                                 struct Complex {<br>
                                 &nbsp;&nbsp;double r, i;<br>
-                                &nbsp;&nbsp;Complex(const Complex &C) = default;<br>
+                                &nbsp;&nbsp;Complex(const Complex &C) : r(C.r), i(C.i);<br>
                                 };
                             </div>
                         </div>
