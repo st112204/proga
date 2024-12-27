@@ -244,9 +244,9 @@
                                 struct Node {<br>
                                 &nbsp;&nbsp;int d;<br>
                                 &nbsp;&nbsp;Node* n;<br>
-                                &nbsp;&nbsp;~Node() { delete n; }<br>
+                                &nbsp;&nbsp;~Node() { delete n; n = nullptr; }<br>
                                 };<br>
-                                struct List { Node* h; ~List() { delete h; } };
+                                struct List { Node* h; ~List() { delete h; h = nullptr } };
                             </div>
                         </div>
                     </div>
